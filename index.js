@@ -1,12 +1,14 @@
-// Aula 2 - Node rodando com express
+// Aula 3 - Fim do Módulo 1 - Node rodando com ejs
 
 var express = require("express");
 var app = express();
+app.set('view engine', 'ejs');
 app.get('/', function(req,res){
-res.send('<h1>Título da página!</h1>');
+res.render('index');	
 });
 
 
 app.listen(3000, function(){
-	console.log("AP rodando!");
+	console.log("servidor rodando!");
 });
+
